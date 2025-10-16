@@ -13,8 +13,6 @@
         main(**vars(_retrieve_args()))
     ```
 
-  - `isort` + `black` でフォーマットをかける。
-
   - ファイルやディレクトリのパスは、pathlib.Path を用いる。
 
     ```python
@@ -26,6 +24,12 @@
     ```python
     fig, ax = plt.subplots()
 
+    ```
+
+  - precommit を有効化する。
+
+    ```sh
+    pre-commit install
     ```
 
 - 事前設定
