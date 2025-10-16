@@ -10,7 +10,7 @@
 
     ```python
     if __name__ == "__main__":
-        main(**vars(_retrieve_argparse()))
+        main(**vars(_retrieve_args()))
     ```
 
   - `isort` + `black` でフォーマットをかける。
