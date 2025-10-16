@@ -1,12 +1,16 @@
 # template_python
 
-- コード依頼テンプレ
+- 基本設定
 
-  - `main.py` と `utils.py` はサンプルなので、それ以外のファイルを git のルートに保存する。
+  - `main.py` と `utils.py` はサンプルなので、それ **以外のファイル** を git のルートに保存する。
+ 
+  - `pip install -r requirements.txt` を実行する。
+ 
+  - `pre-commit install` を実行する。
+
+- リーダブルコードの作成依頼
 
   - 全部関数化する。
-
-  - メインのスクリプトは、`main` とする。
 
   - 以下の形式で実行をする。
 
@@ -26,12 +30,6 @@
     ```python
     fig, ax = plt.subplots()
 
-    ```
-
-  - precommit を有効化する。
-
-    ```sh
-    pre-commit install
     ```
 
 - 事前設定 (レポジトリオーナー向け)
