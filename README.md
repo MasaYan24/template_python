@@ -42,4 +42,6 @@
     ```sh
     $ cat .gitignore
     .envrc
+    .mypy_cache
+    .swp
     ```
