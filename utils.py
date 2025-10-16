@@ -4,7 +4,7 @@ from functools import wraps
 from logging import getLogger
 
 import cv2
-import japanize_matplotlib  # noqa
+import matplotlib_fontja  # noqa
 import numpy as np
 
 
@@ -109,9 +109,7 @@ def put_text_on_image(
 
     if bg_color is not None:
         x, y = position
-        (text_w, text_h), _ = cv2.getTextSize(
-            text, font_face, font_scale, thickness
-        )
+        (text_w, text_h), _ = cv2.getTextSize(text, font_face, font_scale, thickness)
         cv2.rectangle(_img, (x, y - text_h), (x + text_w, y), bg_color, -1)
     cv2.putText(
         _img,
