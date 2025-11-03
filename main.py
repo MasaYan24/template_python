@@ -2,6 +2,8 @@ import argparse
 from logging import getLogger
 from pathlib import Path
 
+import matplotlib_fontja  # noqa
+
 from utils import set_base_log_level, set_log_level
 
 
@@ -29,11 +31,17 @@ def _retrieve_args():
         help="str parameter",
     )
     parser.add_argument(
-        "--choise_param",
+        "--choise-param",
         type=str,
         choices=["a", "b"],
         nargs="+",
         help="choice param",
+    )
+    parser.add_argument(
+        "--show",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="plot を表示する/しない (デフォルトは表示する)",
     )
     parser.add_argument(
         "-v",
@@ -69,6 +77,7 @@ def main(
     file: Path,
     param: str,
     choise_param: list[str],
+    show: bool,
     verbose: int,
 ) -> None:
     logger = getLogger(__name__)
